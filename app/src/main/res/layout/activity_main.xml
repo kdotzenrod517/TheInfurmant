@@ -10,7 +10,7 @@
     <ImageView
             android:layout_width="0dp"
             android:layout_height="239dp"
-            app:srcCompat="@drawable/ic_launcher_background"
+            app:srcCompat="@drawable/dogicon"
             android:id="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" tools:ignore="VectorDrawableCompat"/>
@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/linearLayout" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
-    >
+            android:paddingLeft="10dp" android:paddingRight="10dp">
         <Button
                 android:text="@string/leftArrow"
                 android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp" android:paddingLeft="10dp" android:paddingRight="10dp">
         <TextView
                 android:text="Breed: "
                 android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
             android:id="@+id/linearLayout3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp" android:paddingLeft="10dp" android:paddingRight="10dp">
         <TextView
                 android:text="Temperament:"
                 android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/linearLayout4"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp" android:paddingLeft="10dp" android:paddingRight="10dp">
         <TextView
                 android:text="Height: "
                 android:layout_width="wrap_content"
@@ -130,7 +130,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/linearLayout5"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp" android:paddingLeft="10dp" android:paddingRight="10dp">
         <TextView
                 android:text="Life Span: "
                 android:layout_width="wrap_content"
@@ -153,7 +153,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/linearLayout6"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp" android:paddingLeft="10dp" android:paddingRight="10dp">
         <TextView
                 android:text="Bred for: "
                 android:layout_width="wrap_content"

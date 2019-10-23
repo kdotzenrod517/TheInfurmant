@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity : AppCompatActivity() {
 
     private var myCompositeDisposable: CompositeDisposable? = null
-    private var myDogBreedList: ArrayList<DogImageResponse>? = null
+    private var myDogBreedList: ArrayList<DogImageResponse>? = ArrayList()
     private val BASE_URL = "https://api.thedogapi.com/v1/"
     private lateinit var imageView: ImageView
     private lateinit var breed: TextView
@@ -65,17 +65,21 @@ class MainActivity : AppCompatActivity() {
 
         println("REQUEST: " + requestInterface.getImage("100"))
 
-        myCompositeDisposable?.add(
-            requestInterface.getImage("100")
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe(this::handleResponse)
-        )
+        var int = 0
+        do {
+            myCompositeDisposable?.add(
+                requestInterface.getImage(int.toString())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.io())
+                    .subscribe(this::handleResponse)
+            )
+            int++
+        } while (int <= 3)
     }
 
     @SuppressLint("SetTextI18n")
     private fun handleResponse(allDogBreedList: List<DogImageResponse>) {
-        myDogBreedList = ArrayList(allDogBreedList.filter { it.breeds.isNotEmpty() })
+        myDogBreedList?.addAll(ArrayList(allDogBreedList.filter { it.breeds.isNotEmpty() }.distinctBy { it.breeds[0].name }))
         println(myDogBreedList)
         showBreed()
     }
