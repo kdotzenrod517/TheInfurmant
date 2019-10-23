@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">The Infurmant</string>
+    <string name="leftArrow"><![CDATA[<]]></string>
+    <string name="rightArrow"><![CDATA[>]]></string>
+</resources>
